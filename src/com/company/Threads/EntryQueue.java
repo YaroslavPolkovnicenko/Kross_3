@@ -9,7 +9,7 @@ public class EntryQueue {
 
     public static synchronized void add(String i) {
         queue.add(i);
-        FactoryThread.eventProducer.doWork("");
+        FactoryThread.eventProducer.doWork();
     }
 
     public static String getFirst() {

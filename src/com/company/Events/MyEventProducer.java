@@ -10,15 +10,15 @@ public class MyEventProducer {
         listeners.add(listener);
     }
 
-    protected void fireMyHappend(String message)    {
+    protected void fireMyHappend()    {
 
-        MyEvent ev = new MyEvent(this, message);
+        MyEvent ev = new MyEvent(this);
 
         for(MyListener listener : listeners)
             listener.myHappend(ev);
     }
 
-    public void doWork(String workName)    {
-        fireMyHappend("End work" + workName);
+    public void doWork()    {
+        fireMyHappend();
     }
 }
